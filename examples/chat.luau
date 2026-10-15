@@ -22,7 +22,8 @@ local PAGE = [[<!doctype html>
 <input id="msg" placeholder="Say something and press Enter" autofocus>
 <script>
 const log = document.getElementById("log");
-const ws = new WebSocket(`ws://${location.host}/ws`);
+const proto = location.protocol === "https:" ? "wss" : "ws";
+const ws = new WebSocket(`${proto}://${location.host}/ws`);
 ws.onmessage = (e) => {
   const m = JSON.parse(e.data);
   const line = document.createElement("div");
