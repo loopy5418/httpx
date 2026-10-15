@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Index of {{title}}</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1f2328; --muted: #59636e; --line: #d1d9e0; --link: #0969da; --bg: #ffffff; --hover: #f6f8fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #e6edf3; --muted: #9198a1; --line: #3d444d; --link: #4493f8; --bg: #0d1117; --hover: #151b23; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px 16px; font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg); background: var(--bg); }
+  main { max-width: 860px; margin: 0 auto; }
+  h1 { font-size: 20px; font-weight: 600; margin: 0 0 16px; word-break: break-all; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  th { font-weight: 600; color: var(--muted); font-size: 13px; }
+  td:nth-child(2), td:nth-child(3), th:nth-child(2), th:nth-child(3) { white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; }
+  td:nth-child(2), th:nth-child(2) { text-align: right; }
+  tr:hover td { background: var(--hover); }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer { margin-top: 16px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 560px) { td:nth-child(3), th:nth-child(3) { display: none; } }
+</style>
+</head>
+<body>
+<main>
+<h1>Index of {{title}}</h1>
+<table>
+<thead><tr><th>Name</th><th>Size</th><th>Modified (UTC)</th></tr></thead>
+<tbody>
+{{rows}}
+</tbody>
+</table>
+<footer>Served by httpx</footer>
+</main>
+</body>
+</html>

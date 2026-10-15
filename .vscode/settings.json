@@ -1,0 +1,8 @@
+{
+    "luau-lsp.platform.type": "standard",
+    "luau-lsp.sourcemap.enabled": false,
+    "luau-lsp.types.definitionFiles": {
+        "@sonata": ".sonata/types/globals.d.luau"
+    },
+    "luau-lsp.require.useOriginalRequireByStringSemantics": true
+}
